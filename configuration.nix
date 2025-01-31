@@ -17,7 +17,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "dqk"; # Define your hostname.
+  networking.hostName = "legendary"; # Define your hostname.
   # configure nameserver
   networking.nameservers = [ "8.8.8.8" ];
   # Pick only one of the below networking options.
