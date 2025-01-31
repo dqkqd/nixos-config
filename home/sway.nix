@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }:
-  
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
 {
   services.gnome-keyring.enable = true;
 
@@ -10,7 +15,7 @@
       modifier = "Mod4";
       terminal = "foot";
       startup = [
-        { command = "firefox";}
+        { command = "firefox"; }
       ];
       keybindings = lib.mkOptionDefault {
         "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
