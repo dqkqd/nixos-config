@@ -12,20 +12,19 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ...  }: {
-    nixosConfigurations.legendary = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.dqk = import ./home.nix;
-          # Optionally, use home-manager.extraSpecialArgs to pass
-          # arguments to home.nix
-        }
-      ];
+    nixosConfigurations = {
+      legendary = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [./nixos/configuration.nix];
+      };
+    };
+    
+    homeConfigurations = {
+      dqk = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [./home/home.nix];
+      };
     };
   };
 }
