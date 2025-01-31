@@ -3,9 +3,10 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./globals.nix
     ./keymaps.nix
-    ./plugins/lsp.nix
     ./plugins/conform-nvim.nix
+    ./plugins/lsp.nix
     ./plugins/none-ls.nix
+    ./plugins/treesitter.nix
   ];
 
   programs.nixvim = {
