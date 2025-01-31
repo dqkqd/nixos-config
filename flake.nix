@@ -12,7 +12,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ...  }: {
-    nixosConfigurations.dqk = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.legendary = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
