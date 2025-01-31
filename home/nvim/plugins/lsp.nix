@@ -1,13 +1,11 @@
 {
-  programs.nixvim = {
-    plugins.lsp = {
-      enable = true;
-      inlayHints = true;
+  plugins.lsp = {
+    enable = true;
+    inlayHints = true;
 
-      servers = {
-        nixd.enable = true;
-        lua_ls.enable = true;
-      };
+    servers = {
+      nixd.enable = true;
+      lua_ls.enable = true;
     };
   };
 }

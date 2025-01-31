@@ -1,21 +1,19 @@
 { pkgs, ... }:
 
 {
-  programs.nixvim = {
-    plugins.treesitter = {
-      enable = true;
-      folding = false;
+  plugins.treesitter = {
+    enable = true;
+    folding = false;
 
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-        lua
-        nix
-      ];
+    grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      lua
+      nix
+    ];
 
-      settings = {
-        auto_install = false;
-        highlight = { additional_vim_regix_highlighting = true; };
-        indent.enable = true;
-      };
+    settings = {
+      auto_install = false;
+      highlight = { additional_vim_regix_highlighting = true; };
+      indent.enable = true;
     };
   };
 }
