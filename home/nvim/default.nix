@@ -7,6 +7,7 @@
       ./keymaps.nix
       ./opts.nix
       ./plugins/conform-nvim.nix
+      ./plugins/fzf-lua.nix
       ./plugins/lazygit.nix
       ./plugins/lsp.nix
       ./plugins/none-ls.nix
