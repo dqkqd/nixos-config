@@ -5,6 +5,7 @@
     imports = [
       ./globals.nix
       ./keymaps.nix
+      ./opts.nix
       ./plugins/conform-nvim.nix
       ./plugins/lazygit.nix
       ./plugins/lsp.nix
