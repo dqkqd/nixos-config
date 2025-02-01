@@ -6,6 +6,7 @@
       ./globals.nix
       ./keymaps.nix
       ./plugins/conform-nvim.nix
+      ./plugins/lazygit.nix
       ./plugins/lsp.nix
       ./plugins/none-ls.nix
       ./plugins/treesitter.nix
