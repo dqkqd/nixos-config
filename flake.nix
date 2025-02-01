@@ -14,21 +14,27 @@
       url = "github:nix-community/nixvim/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations = {
       legendary = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [ ./nixos/configuration.nix ];
+        specialArgs = {inherit inputs;};
+        modules = [./nixos/configuration.nix];
       };
     };
 
     homeConfigurations = {
       dqk = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home/home.nix ];
+        extraSpecialArgs = {inherit inputs;};
+        modules = [./home/home.nix];
       };
     };
   };
