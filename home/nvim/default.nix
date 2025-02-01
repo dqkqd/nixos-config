@@ -7,6 +7,7 @@
       ./globals.nix
       ./keymaps.nix
       ./opts.nix
+      ./plugins/blink-cmp.nix
       ./plugins/conform-nvim.nix
       ./plugins/fzf-lua.nix
       ./plugins/lazygit.nix
