@@ -13,6 +13,7 @@
 
     enable = true;
     defaultEditor = true;
+    clipboard.register = "unnamedplus";
 
     colorschemes.catppuccin = { enable = true; };
 
