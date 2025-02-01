@@ -26,7 +26,10 @@
     nixosConfigurations = {
       legendary = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
-        modules = [./nixos/configuration.nix];
+        modules = [
+          ./nixos/configuration.nix
+          ./users
+        ];
       };
     };
 
