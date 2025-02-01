@@ -3,22 +3,28 @@
     enable = true;
 
     keymaps = {
-      "<leader>sg" = {
+      "<leader>ff" = {
+        action = "files";
+        options = {
+          desc = "Fzf-lua files";
+        };
+      };
+      "<leader>fg" = {
         action = "live_grep";
         options = {
           desc = "Fzf-lua live_grep";
         };
       };
-      "<leader>sk" = {
+      "<leader>fk" = {
         action = "keymaps";
         options = {
           desc = "Fzf-lua keymaps";
         };
       };
-      "<leader>ff" = {
-        action = "files";
+      "<leader>ca" = {
+        action = "lsp_code_actions";
         options = {
-          desc = "Fzf-lua files";
+          desc = "Fzf-lua lsp_code_actions";
         };
       };
     };
