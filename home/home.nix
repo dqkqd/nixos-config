@@ -1,5 +1,14 @@
 {
-  imports = [./foot.nix ./fonts.nix ./git.nix ./nvim ./packages.nix ./sway.nix ./zsh.nix];
+  imports = [
+    ./foot.nix
+    ./fonts.nix
+    ./git.nix
+    ./nvim
+    ./packages.nix
+    ./sway.nix
+    ./zoxide.nix
+    ./zsh.nix
+  ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
