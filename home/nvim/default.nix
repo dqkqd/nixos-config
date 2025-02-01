@@ -3,6 +3,7 @@
 
   programs.nixvim = {
     imports = [
+      ./colorschemes.nix
       ./globals.nix
       ./keymaps.nix
       ./opts.nix
@@ -24,8 +25,6 @@
     withPython3 = true;
 
     clipboard.register = "unnamedplus";
-
-    colorschemes.catppuccin = {enable = true;};
 
     plugins.lualine.enable = true;
   };

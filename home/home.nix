@@ -1,5 +1,6 @@
 {
   imports = [
+    ./catppuccin.nix
     ./foot.nix
     ./fonts.nix
     ./git.nix
