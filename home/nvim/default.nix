@@ -12,6 +12,7 @@
       ./plugins/lsp.nix
       ./plugins/none-ls.nix
       ./plugins/treesitter.nix
+      ./plugins/web-devicons.nix
     ];
 
     enable = true;
