@@ -14,7 +14,13 @@
     ];
 
     enable = true;
+
     defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+
+    withPython3 = true;
+
     clipboard.register = "unnamedplus";
 
     colorschemes.catppuccin = { enable = true; };
