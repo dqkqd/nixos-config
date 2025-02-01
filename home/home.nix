@@ -1,6 +1,5 @@
 {
-  imports =
-    [ ./foot.nix ./fonts.nix ./git.nix ./nvim ./packages.nix ./sway.nix ];
+  imports = [./foot.nix ./fonts.nix ./git.nix ./nvim ./packages.nix ./sway.nix];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -47,7 +46,7 @@
   #
   #  /etc/profiles/per-user/dqk/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {EDITOR = "nvim";};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

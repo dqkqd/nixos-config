@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  imports = [ inputs.nixvim.homeManagerModules.nixvim ];
+{inputs, ...}: {
+  imports = [inputs.nixvim.homeManagerModules.nixvim];
 
   programs.nixvim = {
     imports = [
@@ -23,7 +23,7 @@
 
     clipboard.register = "unnamedplus";
 
-    colorschemes.catppuccin = { enable = true; };
+    colorschemes.catppuccin = {enable = true;};
 
     plugins.lualine.enable = true;
   };

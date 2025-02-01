@@ -3,7 +3,7 @@
     enable = true;
     sources = {
       formatting = {
-        nixfmt.enable = true;
+        alejandra.enable = true;
         stylua.enable = true;
       };
     };
