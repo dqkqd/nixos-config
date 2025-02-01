@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ ./foot.nix ./fonts.nix ./git.nix ./nvim ./sway.nix ];
@@ -63,9 +63,7 @@
   #
   #  /etc/profiles/per-user/dqk/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
