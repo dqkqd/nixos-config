@@ -10,7 +10,6 @@
     just
 
     # good utils for fzf in nvim
-    bat
     delta
     fd
     ripgrep
