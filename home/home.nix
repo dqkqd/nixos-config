@@ -6,6 +6,7 @@
     ./git.nix
     ./nvim
     ./packages.nix
+    ./starship.nix
     ./sway.nix
     ./zoxide.nix
     ./zsh.nix
