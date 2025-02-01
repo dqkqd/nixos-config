@@ -3,8 +3,13 @@
     # format
     {
       key = "<leader>fm";
-      action.__raw = ''function() require("conform").format() end'';
+      action = ":Format<CR>";
       options = { desc = "Format current buffer"; };
+    }
+    {
+      key = "<leader>ft";
+      action = ":FormatToggle<CR>";
+      options = { desc = "Toggle autoformat on-save"; };
     }
 
     # lazygit
