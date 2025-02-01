@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, lib, ... }:
 
 {
   services.gnome-keyring.enable = true;
@@ -14,9 +9,7 @@
     config = rec {
       modifier = "Mod4";
       terminal = "foot";
-      startup = [
-        { command = "firefox"; }
-      ];
+      startup = [{ command = "firefox"; }];
       keybindings = lib.mkOptionDefault {
         "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
         "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%-";
@@ -27,4 +20,6 @@
       };
     };
   };
+
+  home.packages = with pkgs; [ wl-clipboard ];
 }
