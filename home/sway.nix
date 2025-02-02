@@ -5,16 +5,27 @@
 }: {
   services.gnome-keyring.enable = true;
 
+  home.packages = with pkgs; [
+    # support screenshot
+    grim
+    slurp
+    # copy on wayland
+    wl-clipboard
+  ];
+
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    config = {
+
+    config = rec {
       modifier = "Mod4";
       terminal = "foot";
+
       startup = [
         {command = "exec systemctl --user import-environment";}
         {command = "firefox";}
       ];
+
       keybindings = lib.mkOptionDefault {
         "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
         "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%-";
@@ -22,6 +33,8 @@
         "XF86AudioMicMute" = "exec wpctl set-mute @DEFAULT_SOURCE@ toggle";
         "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
+        "${modifier}+Shift+r" = "exec slurp | grim -g - - | wl-copy";
+        "${modifier}+Shift+t" = "exec grim - | wl-copy";
       };
 
       input = {
@@ -51,6 +64,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [wl-clipboard];
 }

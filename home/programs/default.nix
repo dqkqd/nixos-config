@@ -17,5 +17,6 @@
     ripgrep.enable = true;
     skim.enable = true;
     zoxide.enable = true;
+    yazi.enable = true;
   };
 }
