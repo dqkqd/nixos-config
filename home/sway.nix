@@ -23,6 +23,18 @@
         "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
       };
+
+      input = {
+        "*" = {
+          dwt = "enabled";
+          tap = "enabled";
+          tap_button_map = "lrm";
+          drag = "enabled";
+          click_method = "clickfinger";
+          middle_emulation = "enabled";
+          scroll_method = "two_finger";
+        };
+      };
     };
   };
 

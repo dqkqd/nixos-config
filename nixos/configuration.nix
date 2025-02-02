@@ -19,6 +19,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # https://nixos.wiki/wiki/Touchpad
+  boot.kernelParams = ["psmouse.synaptics_intertouch=0"];
+
   networking = {
     hostName = "legendary";
     nameservers = ["8.8.8.8"];
@@ -30,13 +33,6 @@
     #   noProxy = "127.0.0.1,localhost,internal.domain";
     # };
   };
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
