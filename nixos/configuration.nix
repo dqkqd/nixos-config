@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ./gpu.nix
+    ./power.nix
     ./sound.nix
   ];
 
