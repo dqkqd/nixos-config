@@ -4,6 +4,7 @@
     sources = {
       formatting = {
         alejandra.enable = true;
+        prettierd.enable = true;
         stylua.enable = true;
       };
     };

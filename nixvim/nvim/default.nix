@@ -27,6 +27,10 @@
 
     clipboard.register = "unnamedplus";
 
-    plugins.lualine.enable = true;
+    # plugins with no setup
+    plugins = {
+      lualine.enable = true;
+      colorizer.enable = true;
+    };
   };
 }
