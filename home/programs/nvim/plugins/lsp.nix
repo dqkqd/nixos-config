@@ -4,8 +4,15 @@
     inlayHints = true;
 
     servers = {
-      nixd.enable = true;
+      cssls = {
+        enable = true;
+        extraOptions = {
+          capabilities.textDocument.completion.completionItem.snippetSupport = true;
+        };
+      };
+
       lua_ls.enable = true;
+      nixd.enable = true;
     };
   };
 }
