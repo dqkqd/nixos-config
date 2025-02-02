@@ -11,6 +11,8 @@
     slurp
     # copy on wayland
     wl-clipboard
+    # notification
+    mako
   ];
 
   wayland.windowManager.sway = {
@@ -24,6 +26,7 @@
       startup = [
         {command = "exec systemctl --user import-environment";}
         {command = "firefox";}
+        {command = "mako";}
       ];
 
       keybindings = lib.mkOptionDefault {
