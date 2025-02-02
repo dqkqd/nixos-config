@@ -111,11 +111,11 @@
   # programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    enableSSHSupport = true;
   };
 
-  # List services that you want to enable:
+  programs.ssh.startAgent = true;
 
+  # List services that you want to enable:
   # Enable the OpenSSH daemon.
   services.openssh.enable = false;
 
