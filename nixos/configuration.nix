@@ -70,11 +70,21 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+    config = {
+      firefox = {
+        default = ["wlr" "gtk"];
+      };
+    };
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
-  programs.firefox.enable = true;
 
   # https://nixos.wiki/wiki/Sway
   # enable polkit for setting up sway in home-manager
