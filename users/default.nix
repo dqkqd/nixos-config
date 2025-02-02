@@ -1,4 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen2
+  ];
+
   programs.zsh.enable = true;
 
   users.users.dqk = {
