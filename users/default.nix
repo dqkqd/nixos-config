@@ -11,7 +11,7 @@
 
   users.users.dqk = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "input"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
