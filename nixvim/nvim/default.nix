@@ -12,6 +12,7 @@
       ./plugins/fzf-lua.nix
       ./plugins/lazygit.nix
       ./plugins/lsp.nix
+      ./plugins/luasnip.nix
       ./plugins/none-ls.nix
       ./plugins/treesitter.nix
       ./plugins/web-devicons.nix
