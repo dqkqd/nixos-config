@@ -4,7 +4,7 @@
     ./fonts.nix
     ./packages.nix
     ./programs
-    ./sway.nix
+    ./sway
   ];
 
   home = {
