@@ -10,6 +10,7 @@
       ./plugins/blink-cmp.nix
       ./plugins/conform-nvim.nix
       ./plugins/fzf-lua.nix
+      ./plugins/gitsigns.nix
       ./plugins/lazygit.nix
       ./plugins/lsp.nix
       ./plugins/luasnip.nix
