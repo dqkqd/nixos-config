@@ -12,6 +12,12 @@
         {command = "waybar";}
       ];
 
+      output = {
+        eDP-1 = {
+          bg = "${./thank-you.png} fill";
+        };
+      };
+
       startup = [
         {command = "systemctl --user import-environment";}
         {command = "mako";}
