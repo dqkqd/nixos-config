@@ -14,6 +14,7 @@
     sessionVariables = {
       EDITOR = "nvim";
       XDG_CURRENT_DESKTOP = "sway";
+      MOZ_ENABLE_WAYLAND = 1;
     };
   };
 
