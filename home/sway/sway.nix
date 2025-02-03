@@ -13,9 +13,10 @@
       ];
 
       startup = [
-        {command = "exec systemctl --user import-environment";}
-        {command = "firefox";}
+        {command = "systemctl --user import-environment";}
         {command = "mako";}
+        # open workspace 1 as default
+        {command = "swaymsg workspace 1";}
       ];
 
       keybindings = lib.mkOptionDefault {
