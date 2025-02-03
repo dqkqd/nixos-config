@@ -35,6 +35,7 @@
     plugins = {
       lualine.enable = true;
       colorizer.enable = true;
+      marks.enable = true;
     };
   };
 }
