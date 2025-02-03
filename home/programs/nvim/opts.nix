@@ -15,10 +15,11 @@
     shiftround = true;
     shiftwidth = 2;
     showmode = false;
+    signcolumn = "yes";
     smartcase = true;
     smartindent = true;
     smoothscroll = true;
-    spelllang = [ "en" ];
+    spelllang = ["en"];
     spell = true;
     tabstop = 2;
     termguicolors = true;
