@@ -15,6 +15,7 @@
       ./plugins/luasnip.nix
       ./plugins/none-ls.nix
       ./plugins/nvim-tree.nix
+      ./plugins/snacks.nix
       ./plugins/treesitter.nix
       ./plugins/web-devicons.nix
     ];
