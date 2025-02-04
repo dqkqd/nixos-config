@@ -5,6 +5,10 @@
     roboto
     font-awesome
 
+    # japanese font
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+
     (nerdfonts.override {fonts = ["FiraCode" "Meslo"];})
   ];
 
