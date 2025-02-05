@@ -15,6 +15,10 @@
       EDITOR = "nvim";
       XDG_CURRENT_DESKTOP = "sway";
       MOZ_ENABLE_WAYLAND = 1;
+
+      # fcitx5
+      GTK_IM_MODULE = "fcitx";
+      QT_IM_MODULE = "fcitx";
     };
   };
 

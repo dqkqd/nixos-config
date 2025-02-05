@@ -21,6 +21,10 @@
       startup = [
         {command = "systemctl --user import-environment";}
         {command = "mako";}
+
+        # start input method
+        {command = "fcitx5";}
+
         # open workspace 1 as default
         {command = "swaymsg workspace 1";}
       ];
