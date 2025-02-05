@@ -5,5 +5,7 @@
     brightnessctl
     just
     okular
+
+    discord
   ];
 }
