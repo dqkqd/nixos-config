@@ -7,5 +7,9 @@
     okular
 
     discord
+
+    # correctly show icons in tray
+    libappindicator
+    adwaita-icon-theme
   ];
 }
