@@ -21,6 +21,7 @@
           "backlight"
           "wireplumber"
           "disk"
+          "tray"
         ];
 
         "sway/workspaces" = {
@@ -84,6 +85,12 @@
           interval = 30;
           format = "{used}";
           path = "/";
+        };
+
+        tray = {
+          icon-size = 21;
+          spacing = 10;
+          show-passive-items = true;
         };
 
         clock = {

@@ -15,7 +15,8 @@
 #battery,
 #backlight,
 #wireplumber,
-#disk {
+#disk,
+#tray {
   margin: 0px 2px;
   padding: 0px 4px;
   background-color: @crust;
