@@ -58,6 +58,7 @@
         "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
         "${modifier}+Shift+r" = "exec slurp | grim -g - - | wl-copy";
         "${modifier}+Shift+t" = "exec grim - | wl-copy";
+        "${modifier}+d" = "exec fuzzel";
       };
 
       input = {

@@ -15,6 +15,7 @@
     fastfetch.enable = true;
     fd.enable = true;
     fzf.enable = true;
+    fuzzel.enable = true;
     ripgrep.enable = true;
     skim.enable = true;
     zoxide.enable = true;
