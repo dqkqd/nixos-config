@@ -12,9 +12,7 @@
       ./plugins/conform-nvim.nix
       ./plugins/fzf-lua.nix
       ./plugins/gitsigns.nix
-      ./plugins/lazygit.nix
       ./plugins/lsp.nix
-      ./plugins/luasnip.nix
       ./plugins/none-ls.nix
       ./plugins/nvim-tree.nix
       ./plugins/snacks.nix
@@ -34,8 +32,10 @@
 
     # plugins with no setup
     plugins = {
-      lualine.enable = true;
       colorizer.enable = true;
+      lazygit.enable = true;
+      lualine.enable = true;
+      luasnip.enable = true;
       marks.enable = true;
       auto-session.enable = true;
       rustaceanvim.enable = true;
