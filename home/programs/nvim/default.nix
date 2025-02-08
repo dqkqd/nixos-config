@@ -38,6 +38,7 @@
       colorizer.enable = true;
       marks.enable = true;
       auto-session.enable = true;
+      rustaceanvim.enable = true;
     };
   };
 }
