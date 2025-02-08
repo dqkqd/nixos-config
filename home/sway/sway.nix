@@ -13,10 +13,30 @@
       ];
 
       output = {
-        eDP-1 = {
+        "*" = {
           bg = "${./thank-you.png} fill";
         };
+        "HDMI-A-1" = {
+          mode = "1920x1080@74.973Hz";
+        };
       };
+
+      workspaceOutputAssign = let
+        externalWorkspaces = map builtins.toString [1 2 3 4 5 6 7 8];
+        externals =
+          map (ws: {
+            workspace = ws;
+            output = "HDMI-A-1";
+          })
+          externalWorkspaces;
+      in
+        externals
+        ++ [
+          {
+            workspace = "9";
+            output = "eDP-1";
+          }
+        ];
 
       startup = [
         {command = "systemctl --user import-environment";}
