@@ -4,7 +4,7 @@
     settings = {
       main = {
         term = "xterm-256color";
-        font = "MesloLGS Nerd Font:size=14";
+        font = "MesloLGS Nerd Font:size=18";
         dpi-aware = "yes";
       };
       colors = {
