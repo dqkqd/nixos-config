@@ -4,7 +4,6 @@
     ./firefox.nix
     ./foot.nix
     ./git.nix
-    ./nvim
     ./starship.nix
     ./zed-editor.nix
     ./zsh.nix
