@@ -3,7 +3,10 @@
     enable = true;
 
     settings = {
-      formatters_by_ft = {nix = ["alejandra"];};
+      formatters_by_ft = {
+        go = ["goimports" "gofumpt"];
+        nix = ["alejandra"];
+      };
       format_on_save =
         # Lua
         ''

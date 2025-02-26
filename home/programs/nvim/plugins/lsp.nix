@@ -10,7 +10,7 @@
           capabilities.textDocument.completion.completionItem.snippetSupport = true;
         };
       };
-
+      gopls.enable = true;
       lua_ls.enable = true;
       nixd.enable = true;
     };
