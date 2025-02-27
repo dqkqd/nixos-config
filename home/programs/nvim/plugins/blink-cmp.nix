@@ -42,7 +42,7 @@
       signature.enabled = true;
       sources = {
         cmdline = [];
-        default = ["lsp" "path" "snippets" "luasnip" "buffer"];
+        default = ["lsp" "path" "snippets" "buffer"];
       };
     };
   };
