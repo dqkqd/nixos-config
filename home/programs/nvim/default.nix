@@ -13,6 +13,7 @@
       ./plugins/fzf-lua.nix
       ./plugins/gitsigns.nix
       ./plugins/lsp.nix
+      ./plugins/luasnip.nix
       ./plugins/none-ls.nix
       ./plugins/nvim-tree.nix
       ./plugins/snacks.nix
@@ -32,12 +33,12 @@
 
     # plugins with no setup
     plugins = {
+      auto-session.enable = true;
       colorizer.enable = true;
+      friendly-snippets.enable = true;
       lazygit.enable = true;
       lualine.enable = true;
-      luasnip.enable = true;
       marks.enable = true;
-      auto-session.enable = true;
       rustaceanvim.enable = true;
     };
   };
