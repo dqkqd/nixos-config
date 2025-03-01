@@ -46,6 +46,15 @@
           # multiple cursor
           "ctrl-n" = "editor::AddSelectionBelow";
           "ctrl-p" = "editor::SelectNext";
+
+          # tasks
+          "space g g" = [
+            "task::Spawn"
+            {
+              task_name = "start lazygit";
+              reveal_target = "center";
+            }
+          ];
         };
       }
 
@@ -139,5 +148,18 @@
         };
       };
     };
+  };
+
+  xdg.configFile."zed/tasks.json" = {
+    text = ''
+      [
+        {
+          "label": "start lazygit",
+          "command": "${lib.getExe pkgs.lazygit} -p $ZED_WORKTREE_ROOT",
+          "hide": "on_success",
+        }
+      ]
+    '';
+    force = true;
   };
 }
