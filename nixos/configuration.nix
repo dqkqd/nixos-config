@@ -1,7 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-{pkgs, ...}: {
+{
+  hostname,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./gpu.nix
@@ -23,7 +27,7 @@
   boot.kernelParams = ["psmouse.synaptics_intertouch=0"];
 
   networking = {
-    hostName = "legendary";
+    hostName = "${hostname}";
     nameservers = ["8.8.8.8"];
     networkmanager.enable = true;
 
