@@ -4,8 +4,10 @@
   ...
 }: {
   programs.zed-editor.userSettings = {
-    ui_font_family = "FiraCode Nerd Font Mono";
-    buffer_font_family = "FiraCode Nerd Font Mono";
+    # Zed cannot correctly finds font atm. See: <https://github.com/zed-industries/zed/issues/18982>
+    ui_font_family = "Zed Plex Mono";
+    buffer_font_family = "Zed Plex Mono";
+    terminal.font_family = "Zed Plex Mono";
     inlay_hints.enabled = true;
     theme = {
       mode = "system";
