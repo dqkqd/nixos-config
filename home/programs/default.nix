@@ -6,6 +6,7 @@
     ./git.nix
     ./nvim
     ./starship.nix
+    ./zed-editor.nix
     ./zsh.nix
   ];
 

@@ -12,7 +12,7 @@
     homeDirectory = "/home/dqk";
     stateVersion = "24.11"; # Please read the comment before changing.
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "zeditor";
       XDG_CURRENT_DESKTOP = "sway";
       MOZ_ENABLE_WAYLAND = 1;
 
