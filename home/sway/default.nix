@@ -12,6 +12,8 @@
     slurp
     # copy on wayland
     wl-clipboard
+    # record on wayland
+    wf-recorder
     # notification
     mako
   ];
