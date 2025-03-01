@@ -44,6 +44,14 @@
 
       Go = {
         language_servers = ["gopls"];
+        formatter = [
+          {
+            external = {command = "goimports";};
+          }
+          {
+            external = {command = "gofumpt";};
+          }
+        ];
         format_on_save = "on";
       };
     };
