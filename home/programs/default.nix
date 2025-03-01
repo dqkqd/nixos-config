@@ -5,7 +5,7 @@
     ./foot.nix
     ./git.nix
     ./starship.nix
-    ./zed-editor.nix
+    ./zed-editor
     ./zsh.nix
   ];
 
