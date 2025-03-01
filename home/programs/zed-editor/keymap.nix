@@ -26,11 +26,16 @@
         "] b" = "pane::ActivateNextItem";
         "[ B" = "pane::SwapItemLeft";
         "] B" = "pane::SwapItemRight";
-        "space b c" = "pane::CloseActiveItem";
+        "space b d" = "pane::CloseActiveItem";
         "space b l" = "pane::CloseItemsToTheRight";
         "space b h" = "pane::CloseItemsToTheLeft";
 
-        # navigation
+        # nagivation
+        # git
+        "] h" = "editor::GoToHunk";
+        "[ h" = "editor::GoToPrevHunk";
+
+        # search
         "space f f" = "file_finder::Toggle";
         "space f g" = "pane::DeploySearch";
 
@@ -50,6 +55,13 @@
             reveal_target = "center";
           }
         ];
+      };
+    }
+    # terminal
+    {
+      context = "Terminal";
+      bindings = {
+        "ctrl-shift-w" = "pane::CloseAllItems";
       };
     }
 
