@@ -10,6 +10,7 @@
     extensions = [
       "just"
       "git-firefly"
+      "make"
       "nix"
     ];
   };
