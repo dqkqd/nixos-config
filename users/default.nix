@@ -1,15 +1,16 @@
 {
   pkgs,
-  inputs,
+  nixos-hardware,
+  username,
   ...
 }: {
   imports = [
-    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen2
+    nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen2
   ];
 
   programs.zsh.enable = true;
 
-  users.users.dqk = {
+  users.users.${username} = {
     isNormalUser = true;
     extraGroups = ["wheel" "input"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;

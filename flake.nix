@@ -21,14 +21,27 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs @ {
-    nixpkgs,
+  outputs = {
+    catppuccin,
     home-manager,
+    nixos-hardware,
+    nixpkgs,
     ...
-  }: {
+  }: let
+    system = "x86_64-linux";
+
+    hostname = "legendary";
+    username = "dqk";
+
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
     nixosConfigurations = {
-      legendary = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+      ${hostname} = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit username;
+          inherit hostname;
+          inherit nixos-hardware;
+        };
         modules = [
           ./nixos/configuration.nix
           ./users
@@ -37,9 +50,12 @@
     };
 
     homeConfigurations = {
-      dqk = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs;};
+      ${username} = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit catppuccin;
+          inherit username;
+        };
         modules = [./home/home.nix];
       };
     };

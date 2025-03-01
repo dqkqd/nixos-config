@@ -1,4 +1,4 @@
-{
+{username, ...}: {
   imports = [
     ./catppuccin.nix
     ./fonts.nix
@@ -8,8 +8,8 @@
   ];
 
   home = {
-    username = "dqk";
-    homeDirectory = "/home/dqk";
+    username = "${username}";
+    homeDirectory = "/home/${username}";
     stateVersion = "24.11"; # Please read the comment before changing.
     sessionVariables = {
       EDITOR = "zeditor";
