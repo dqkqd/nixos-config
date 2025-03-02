@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "nixpkgs/nixpkgs-unstable";
 
     # hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -26,6 +27,7 @@
     home-manager,
     nixos-hardware,
     nixpkgs,
+    nixpkgs-unstable,
     ...
   }: let
     system = "x86_64-linux";
@@ -34,6 +36,7 @@
     username = "dqk";
 
     pkgs = nixpkgs.legacyPackages.${system};
+    pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
   in {
     nixosConfigurations = {
       ${hostname} = nixpkgs.lib.nixosSystem {
@@ -55,6 +58,7 @@
         extraSpecialArgs = {
           inherit catppuccin;
           inherit username;
+          inherit pkgsUnstable;
         };
         modules = [./home/home.nix];
       };
