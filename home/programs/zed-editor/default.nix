@@ -15,6 +15,7 @@
       "make"
       "marksman"
       "nix"
+      "typos"
     ];
   };
 }

@@ -133,6 +133,12 @@
           path = lib.getExe pkgs.marksman;
         };
       };
+
+      typos = {
+        binary = {
+          path = lib.getExe pkgs.typos-lsp;
+        };
+      };
     };
   };
 }
