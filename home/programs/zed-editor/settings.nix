@@ -57,9 +57,6 @@
       };
     };
 
-    # manage extension in ./default.nix instead
-    auto_install_extensions = false;
-
     # not sure why but zed needs node
     node = {
       path = lib.getExe pkgs.nodejs;
@@ -100,6 +97,10 @@
         language_servers = ["nixd" "!nil"];
         format_on_save = "on";
       };
+
+      Markdown = {
+        format_on_save = "on";
+      };
     };
 
     lsp = {
@@ -124,6 +125,12 @@
           formatting = {
             command = ["${lib.getExe pkgs.alejandra}" "--quiet" "--"];
           };
+        };
+      };
+
+      marksman = {
+        binary = {
+          path = lib.getExe pkgs.marksman;
         };
       };
     };
