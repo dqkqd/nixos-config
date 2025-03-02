@@ -1,4 +1,4 @@
-{
+{pkgsUnstable, ...}: {
   imports = [
     ./keymap.nix
     ./settings.nix
@@ -7,6 +7,7 @@
 
   programs.zed-editor = {
     enable = true;
+    package = pkgsUnstable.zed-editor;
     extensions = [
       "catppuccin-icons"
       "git-firefly"
