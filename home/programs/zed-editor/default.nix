@@ -8,8 +8,9 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
-      "just"
+      "catppuccin-icons"
       "git-firefly"
+      "just"
       "make"
       "nix"
     ];

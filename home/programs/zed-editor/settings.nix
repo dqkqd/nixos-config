@@ -25,6 +25,7 @@
       # light = "Catppuccin Latte";
       # dark = "Catppuccin Mocha";
     };
+    icon_theme = "Catppuccin Latte";
 
     # disable telemetry log
     telemetry = {
