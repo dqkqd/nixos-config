@@ -13,7 +13,10 @@
       "git-firefly"
       "just"
       "make"
+      "marksman"
       "nix"
+      "toml"
+      "typos"
     ];
   };
 }

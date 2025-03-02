@@ -57,9 +57,6 @@
       };
     };
 
-    # manage extension in ./default.nix instead
-    auto_install_extensions = false;
-
     # not sure why but zed needs node
     node = {
       path = lib.getExe pkgs.nodejs;
@@ -78,18 +75,8 @@
     };
 
     languages = {
-      Nix = {
-        language_servers = ["nixd" "!nil"];
-        format_on_save = "on";
-      };
-
-      JSONC = {
-        language_servers = ["json-language-server"];
-        format_on_save = "on";
-      };
-
       Go = {
-        language_servers = ["gopls"];
+        language_servers = ["gopls" "..."];
         formatter = [
           {
             external = {command = "goimports";};
@@ -100,12 +87,58 @@
         ];
         format_on_save = "on";
       };
+
+      JSONC = {
+        language_servers = ["json-language-server"];
+        format_on_save = "on";
+      };
+
+      Nix = {
+        language_servers = ["nixd" "!nil"];
+        format_on_save = "on";
+      };
+
+      Markdown = {
+        format_on_save = "on";
+      };
     };
 
     lsp = {
       gopls = {
         binary = {
           path_lookup = true;
+        };
+        initialization_options = {
+          gofumpt = true;
+          codelenses = {
+            gc_details = false;
+            generate = true;
+            regenerate_cgo = true;
+            run_govulncheck = true;
+            test = true;
+            tidy = true;
+            upgrade_dependency = true;
+            vendor = true;
+          };
+          hints = {
+            assignVariableTypes = true;
+            compositeLiteralFields = true;
+            compositeLiteralTypes = true;
+            constantValues = true;
+            functionTypeParameters = true;
+            parameterNames = true;
+            rangeVariableTypes = true;
+          };
+          analyses = {
+            nilness = true;
+            unusedparams = true;
+            unusedwrite = true;
+            useany = true;
+          };
+          usePlaceholders = true;
+          completeUnimported = true;
+          staticcheck = true;
+          semanticTokens = true;
         };
       };
 
@@ -124,6 +157,18 @@
           formatting = {
             command = ["${lib.getExe pkgs.alejandra}" "--quiet" "--"];
           };
+        };
+      };
+
+      marksman = {
+        binary = {
+          path = lib.getExe pkgs.marksman;
+        };
+      };
+
+      typos = {
+        binary = {
+          path = lib.getExe pkgs.typos-lsp;
         };
       };
     };
