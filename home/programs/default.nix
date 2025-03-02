@@ -2,7 +2,7 @@
   imports = [
     ./direnv.nix
     ./firefox.nix
-    ./foot.nix
+    ./ghostty.nix
     ./git.nix
     ./starship.nix
     ./zed-editor
