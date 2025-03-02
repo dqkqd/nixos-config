@@ -5,7 +5,7 @@
 
     config = rec {
       modifier = "Mod4";
-      terminal = "foot";
+      terminal = "ghostty";
 
       # use waybar instead
       bars = [
