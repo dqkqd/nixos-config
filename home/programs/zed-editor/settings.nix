@@ -78,16 +78,6 @@
     };
 
     languages = {
-      Nix = {
-        language_servers = ["nixd" "!nil"];
-        format_on_save = "on";
-      };
-
-      JSONC = {
-        language_servers = ["json-language-server"];
-        format_on_save = "on";
-      };
-
       Go = {
         language_servers = ["gopls"];
         formatter = [
@@ -98,6 +88,16 @@
             external = {command = "gofumpt";};
           }
         ];
+        format_on_save = "on";
+      };
+
+      JSONC = {
+        language_servers = ["json-language-server"];
+        format_on_save = "on";
+      };
+
+      Nix = {
+        language_servers = ["nixd" "!nil"];
         format_on_save = "on";
       };
     };
