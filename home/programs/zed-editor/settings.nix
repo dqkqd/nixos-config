@@ -76,7 +76,7 @@
 
     languages = {
       Go = {
-        language_servers = ["gopls"];
+        language_servers = ["gopls" "..."];
         formatter = [
           {
             external = {command = "goimports";};
