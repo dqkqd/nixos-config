@@ -21,6 +21,14 @@
         };
       };
 
+      input = {
+        "type:keyboard" = {
+          xkb_layout = "us,us";
+          xkb_variant = ",colemak";
+          xkb_options = "grp:alt_shift_toggle";
+        };
+      };
+
       workspaceOutputAssign = let
         externalWorkspaces = map builtins.toString [1 2 3 4 5 6 7 8];
         externals =
