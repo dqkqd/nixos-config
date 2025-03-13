@@ -16,6 +16,7 @@
 #backlight,
 #wireplumber,
 #disk,
+#language,
 #tray {
   margin: 0px 2px;
   padding: 0px 4px;
@@ -58,6 +59,10 @@ window#waybar {
 
 #wireplumber {
   color: @sapphire;
+}
+
+#language {
+  color: @flamingo;
 }
 
 #workspaces button {

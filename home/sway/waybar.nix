@@ -21,6 +21,7 @@
           "backlight"
           "wireplumber"
           "disk"
+          "sway/language"
           "tray"
         ];
 
@@ -85,6 +86,10 @@
           interval = 30;
           format = "{used}";
           path = "/";
+        };
+
+        "sway/language" = {
+          format = "{short} {variant}";
         };
 
         tray = {
