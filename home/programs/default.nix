@@ -4,6 +4,7 @@
     ./firefox.nix
     ./ghostty.nix
     ./git.nix
+    ./nvf.nix
     ./starship.nix
     ./zed-editor
     ./zsh.nix

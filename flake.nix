@@ -20,6 +20,12 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    # nvf for neovim
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -28,6 +34,7 @@
     nixos-hardware,
     nixpkgs,
     nixpkgs-unstable,
+    nvf,
     ...
   }: let
     system = "x86_64-linux";
@@ -60,7 +67,10 @@
           inherit username;
           inherit pkgsUnstable;
         };
-        modules = [./home/home.nix];
+        modules = [
+          nvf.homeManagerModules.default
+          ./home/home.nix
+        ];
       };
     };
   };
