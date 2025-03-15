@@ -2,7 +2,16 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestion.enable = true;
+
+    autosuggestion = {
+      enable = true;
+      strategy = [
+        "history"
+        "completion"
+        "match_prev_cmd"
+      ];
+    };
+
     syntaxHighlighting.enable = true;
     history.size = 10000;
     historySubstringSearch.enable = true;
