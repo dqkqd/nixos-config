@@ -50,6 +50,19 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
       },
     },
   },
+
+  { import = 'lazyvim.plugins.extras.editor.fzf' },
+
+  { import = 'lazyvim.plugins.extras.coding.mini-surround' },
+  { import = 'lazyvim.plugins.extras.coding.luasnip' },
+  { import = 'lazyvim.plugins.extras.coding.mini-comment' },
+  { import = 'lazyvim.plugins.extras.coding.mini-snippets' },
+
+  { import = 'lazyvim.plugins.extras.lang.go' },
+  { import = 'lazyvim.plugins.extras.lang.markdown' },
+  { import = 'lazyvim.plugins.extras.lang.nix' },
+  { import = 'lazyvim.plugins.extras.lang.toml' },
+
   -- import/override with your plugins
   { import = 'plugins' },
 }, lazyOptions)
