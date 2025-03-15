@@ -5,7 +5,6 @@
     ./ghostty.nix
     ./git.nix
     ./starship.nix
-    ./zed-editor
     ./zsh.nix
   ];
 

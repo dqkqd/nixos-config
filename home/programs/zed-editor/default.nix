@@ -6,7 +6,7 @@
   ];
 
   programs.zed-editor = {
-    enable = true;
+    enable = false;
     package = pkgsUnstable.zed-editor;
     extensions = [
       "catppuccin-icons"
