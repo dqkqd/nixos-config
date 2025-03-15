@@ -56,6 +56,23 @@
         fi
       ''\$EDITOR flake.nix
       }
+
+      theme_switcher() {
+        local generations=("''\${(@f)''\$(home-manager generations)}")
+        for generation in "''\${generations[@]}"
+        do
+          local components=(''\${=generation})
+          local component_path=''\${components[-1]}
+          local theme_path="''\$component_path/specialisation/''\$1"
+          if [[ -d $theme_path ]]; then
+            echo "switch to $1 theme"
+            $theme_path/activate
+            return
+          fi
+        done
+
+        echo "cannot find $1 theme"
+      }
     '';
   };
 }
