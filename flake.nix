@@ -39,9 +39,7 @@
     nixosConfigurations = {
       ${hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit username;
-          inherit hostname;
-          inherit nixos-hardware;
+          inherit username hostname nixos-hardware;
         };
         modules = [
           ./nixos/configuration.nix
@@ -54,10 +52,7 @@
       ${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
-          inherit catppuccin;
-          inherit username;
-          inherit pkgsUnstable;
-          inherit nixcats;
+          inherit catppuccin username pkgsUnstable nixcats;
         };
         modules = [./home/home.nix];
       };
