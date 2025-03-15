@@ -17,7 +17,6 @@
         windowMemory = "2g";
         packSizeLimit = "1g";
       };
-      core.editor = "${pkgs.zed-editor}/bin/zeditor --wait";
     };
   };
 }

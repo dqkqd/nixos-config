@@ -14,12 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     catppuccin.url = "github:catppuccin/nix";
+
+    nixcats.url = "path:./nixcats";
   };
 
   outputs = {
@@ -28,6 +25,7 @@
     nixos-hardware,
     nixpkgs,
     nixpkgs-unstable,
+    nixcats,
     ...
   }: let
     system = "x86_64-linux";
@@ -59,6 +57,7 @@
           inherit catppuccin;
           inherit username;
           inherit pkgsUnstable;
+          inherit nixcats;
         };
         modules = [./home/home.nix];
       };
