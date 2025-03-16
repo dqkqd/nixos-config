@@ -85,7 +85,13 @@
       name,
       mkNvimPlugin,
       ...
-    } @ packageDef: {
+    } @ packageDef: let
+      # allow rebasing after pushing with gpg enable
+      lazyGitConfig = pkgs.writeText "lazygit_config.yml" ''
+        git:
+          overrideGpg: true
+      '';
+    in {
       # to define and use a new category, simply add a new list to a set here,
       # and later, you will include categoryname = true; in the set you
       # provide when you build the package using this builder function.
@@ -104,7 +110,7 @@
           # Apparently lazygit when launched via snacks cant create its own config file
           # but we can add one from nix!
           (pkgs.writeShellScriptBin "lazygit" ''
-            exec ${pkgs.lazygit}/bin/lazygit --use-config-file ${pkgs.writeText "lazygit_config.yml" ""} "$@"
+            exec ${pkgs.lazygit}/bin/lazygit --use-config-file ${lazyGitConfig} "$@"
           '')
           nil # I would go for nixd but lazy chooses this one idk
           alejandra

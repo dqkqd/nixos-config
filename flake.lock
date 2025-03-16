@@ -248,7 +248,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-8+BKep/F+F3GS6SP/OhH6NQbVt+O3WoAfmtnUjP1k/U=",
+        "narHash": "sha256-NTnE3OBfGooAmG5HW2kEsu45jRKzAqryyzIve1uHVAA=",
         "path": "./nixcats",
         "type": "path"
       },
