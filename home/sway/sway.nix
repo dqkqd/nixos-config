@@ -66,6 +66,7 @@
         "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
         "${modifier}+Shift+r" = "exec slurp | grim -g - - | wl-copy";
         "${modifier}+Shift+t" = "exec grim - | wl-copy";
+        "Print" = "exec grim ''\$HOME/pictures/''\$(date +'%Y-%m-%d-%H%M%S_grim.png')";
         "${modifier}+d" = "exec fuzzel";
       };
 
