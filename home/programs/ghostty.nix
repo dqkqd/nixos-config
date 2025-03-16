@@ -8,8 +8,8 @@
     settings = {
       auto-update = "off";
       background-opacity = 0.9;
-      font-family = "MesloLGS Nerd Font Mono";
-      font-size = 13;
+      font-family = "FiraCode Nerd Font Mono";
+      font-size = 13.5;
       maximize = true;
     };
   };
