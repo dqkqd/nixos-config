@@ -20,9 +20,3 @@ keymap.set("n", "<leader>0", function() bufferline.go_to(0) end, { desc = "Goto 
 keymap.set("n", "<leader>bl", function() bufferline.close_in_direction("right") end, {desc = "Delete buffer in the right", silent = true})
 keymap.set("n", "<leader>bh", function() bufferline.close_in_direction("left") end, {desc = "Delete buffer in the left", silent = true})
 -- stylua: ignore end
-
-keymap.set({ 'n' }, '<C-k>', '<cmd>m-2<cr>', { desc = 'Move line up', silent = true })
-keymap.set({ 'n' }, '<C-j>', '<cmd>m+1<cr>', { desc = 'Move line down', silent = true })
--- not sure <cmd> doesn't work in this case
-keymap.set({ 'v', 'x' }, '<C-k>', ":'<,'>m-2<cr>gv=gv", { desc = 'Move lines up', silent = true })
-keymap.set({ 'v', 'x' }, '<C-j>', ":'<,'>m'>+1<cr>gv=gv", { desc = 'Move lines down', silent = true })
