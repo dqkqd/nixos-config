@@ -1,27 +1,18 @@
-{
-  inputs,
-  username,
-  ...
-}: let
-  editor = inputs.nixcats.defaultPackageName;
-in {
+{username, ...}: {
   imports = [
     ./catppuccin.nix
     ./fonts.nix
     ./packages.nix
     ./programs
     ./sway
-    inputs.nixcats.homeModules.default
   ];
-
-  ${editor}.enable = true;
 
   home = {
     username = "${username}";
     homeDirectory = "/home/${username}";
     stateVersion = "24.11"; # Please read the comment before changing.
     sessionVariables = {
-      EDITOR = "${editor}";
+      EDITOR = "nvim";
       XDG_CURRENT_DESKTOP = "sway";
       MOZ_ENABLE_WAYLAND = 1;
 
