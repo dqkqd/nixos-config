@@ -1,11 +1,11 @@
 {
+  inputs,
   pkgs,
-  nixos-hardware,
   username,
   ...
 }: {
   imports = [
-    nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen2
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen2
   ];
 
   programs.zsh.enable = true;
