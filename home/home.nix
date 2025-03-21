@@ -1,9 +1,9 @@
 {
-  nixcats,
+  inputs,
   username,
   ...
 }: let
-  editor = nixcats.defaultPackageName;
+  editor = inputs.nixcats.defaultPackageName;
 in {
   imports = [
     ./catppuccin.nix
@@ -11,7 +11,7 @@ in {
     ./packages.nix
     ./programs
     ./sway
-    nixcats.homeModules.default
+    inputs.nixcats.homeModules.default
   ];
 
   ${editor}.enable = true;

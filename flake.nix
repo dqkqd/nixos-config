@@ -20,26 +20,22 @@
   };
 
   outputs = {
-    catppuccin,
     home-manager,
     nixos-hardware,
-    nixpkgs,
-    nixpkgs-unstable,
-    nixcats,
     ...
-  }: let
+  } @ inputs: let
     system = "x86_64-linux";
 
     hostname = "legendary";
     username = "dqk";
 
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs = inputs.nixpkgs.legacyPackages.${system};
+    pkgsUnstable = inputs.nixpkgs-unstable.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      ${hostname} = nixpkgs.lib.nixosSystem {
+      ${hostname} = inputs.nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit username hostname nixos-hardware;
+          inherit inputs hostname username;
         };
         modules = [
           ./nixos/configuration.nix
@@ -52,7 +48,7 @@
       ${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
-          inherit catppuccin username pkgsUnstable nixcats;
+          inherit inputs pkgsUnstable username;
         };
         modules = [./home/home.nix];
       };
