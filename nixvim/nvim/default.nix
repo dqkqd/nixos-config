@@ -17,6 +17,7 @@
     ) [] (readDir by-name))
     ++ [
       ./colorscheme.nix
+      ./options.nix
       ./performance.nix
     ];
 
@@ -26,12 +27,6 @@
 
   # TODO: diagnostic
   # TODO: files
-  # TODO: globals
-  # TODO: opts
-  opts = {
-    number = true;
-    relativenumber = true;
-  };
 
   viAlias = false;
   vimAlias = false;
@@ -44,11 +39,6 @@
 
   # experimental, not sure if it works
   luaLoader.enable = true;
-
-  clipboard = {
-    register = "unnamedplus";
-    providers.wl-copy.enable = true;
-  };
 
   # TODO: move elsewhere
   plugins.lz-n.enable = true;
