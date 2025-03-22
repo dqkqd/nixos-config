@@ -16,6 +16,18 @@
       };
     }
 
+    ## Fzf-Lua ##
+    {
+      mode = "n";
+      key = "<leader>fz";
+      action = "<cmd>FzfLua<cr>";
+      options = {
+        silent = true;
+        desc = "open fzf-lua";
+      };
+    }
+    ## Fzf-Lua ##
+
     ## git signs ##
     {
       mode = ["n" "v"];
