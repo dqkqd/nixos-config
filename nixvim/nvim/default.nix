@@ -17,6 +17,7 @@
     ) [] (readDir by-name))
     ++ [
       ./colorscheme.nix
+      ./diagnostics.nix
       ./keymaps.nix
       ./options.nix
       ./performance.nix
@@ -26,7 +27,6 @@
 
   package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
 
-  # TODO: diagnostic
   # TODO: files
 
   viAlias = false;
