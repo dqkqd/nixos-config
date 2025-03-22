@@ -17,6 +17,7 @@
     ) [] (readDir by-name))
     ++ [
       ./colorscheme.nix
+      ./keymaps.nix
       ./options.nix
       ./performance.nix
     ];
