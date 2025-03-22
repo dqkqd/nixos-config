@@ -18,7 +18,12 @@
         nix = [
           "alejandra"
         ];
+        go = [
+          "goimports"
+          "gofumpt"
+        ];
       };
+
       formatters = {
         alejandra = {
           command = lib.getExe pkgs.alejandra;
