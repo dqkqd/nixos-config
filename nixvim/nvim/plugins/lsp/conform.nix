@@ -1,8 +1,4 @@
 {
-  lib,
-  pkgs,
-  ...
-}: {
   plugins.conform-nvim = {
     enable = true;
 
@@ -14,22 +10,6 @@
     };
 
     settings = {
-      formatters_by_ft = {
-        nix = [
-          "alejandra"
-        ];
-        go = [
-          "goimports"
-          "gofumpt"
-        ];
-      };
-
-      formatters = {
-        alejandra = {
-          command = lib.getExe pkgs.alejandra;
-        };
-      };
-
       default_format_opts = {
         lsp_format = "fallback";
       };
