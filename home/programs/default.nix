@@ -1,5 +1,6 @@
 {
   imports = [
+    ./bat.nix
     ./direnv.nix
     ./firefox.nix
     ./ghostty.nix
@@ -9,7 +10,6 @@
   ];
 
   programs = {
-    bat.enable = true;
     htop.enable = true;
     fastfetch.enable = true;
     fd.enable = true;
