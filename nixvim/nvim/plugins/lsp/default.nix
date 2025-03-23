@@ -9,5 +9,11 @@
   plugins.lsp = {
     enable = true;
     inlayHints = true;
+
+    keymaps = {
+      lspBuf = {
+        "<leader>cr" = "rename";
+      };
+    };
   };
 }
