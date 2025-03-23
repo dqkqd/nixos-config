@@ -8,7 +8,6 @@
   catppuccin = lib.mkDefault {
     enable = true;
     flavor = "mocha";
-    zed.flavor = "latte";
   };
 
   specialisation = lib.mkDefault {
