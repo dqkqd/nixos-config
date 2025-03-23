@@ -18,6 +18,7 @@
     ++ [
       ./colorscheme.nix
       ./diagnostics.nix
+      ./ft.nix
       ./keymaps.nix
       ./options.nix
       ./performance.nix
@@ -26,8 +27,6 @@
   enableMan = true;
 
   package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
-
-  # TODO: files
 
   viAlias = false;
   vimAlias = false;
