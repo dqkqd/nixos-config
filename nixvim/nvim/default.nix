@@ -36,7 +36,4 @@
   withRuby = false;
 
   # TODO: autocmd
-
-  # TODO: move elsewhere
-  plugins.lz-n.enable = true;
 }
