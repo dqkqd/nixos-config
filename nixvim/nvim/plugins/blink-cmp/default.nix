@@ -16,17 +16,9 @@
   plugins.mini.modules.icons = {};
 
   # providers
-  extraPackages = with pkgs; [
-    # blink-cmp-dictionary
-    wordnet
-  ];
-
   extraPlugins = with pkgs.vimPlugins; [
     blink-cmp-conventional-commits
   ];
-
-  plugins.blink-cmp-dictionary.enable = true;
-  plugins.blink-cmp-spell.enable = true;
 
   plugins.blink-cmp = {
     enable = true;
@@ -106,10 +98,7 @@
           "path"
           "snippets"
           "buffer"
-
           "conventional_commits"
-          "dictionary"
-          "spell"
         ];
 
         providers = {
@@ -121,16 +110,6 @@
                 return vim.bo.filetype == 'gitcommit'
               end
             '';
-          };
-          dictionary = {
-            name = "Dict";
-            module = "blink-cmp-dictionary";
-            min_keyword_length = 3;
-          };
-          spell = {
-            name = "Spell";
-            module = "blink-cmp-spell";
-            score_offset = 1;
           };
         };
       };
