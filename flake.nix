@@ -16,7 +16,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    nixcats.url = "path:./nixcats";
+    nixvim-config.url = "path:./nixvim";
   };
 
   outputs = {
