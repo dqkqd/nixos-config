@@ -9,6 +9,7 @@
       auto-update = "off";
       background-opacity = 0.9;
       font-family = "FiraCode Nerd Font Mono";
+      font-feature = ["-calt" "-liga" "-dlig"];
       font-size = 13.5;
       maximize = true;
     };
