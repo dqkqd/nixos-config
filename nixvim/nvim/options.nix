@@ -34,7 +34,6 @@
     signcolumn = "yes";
     smartcase = true;
     smartindent = true;
-    spell = true;
     spelllang = ["en"];
     tabstop = 2;
     termguicolors = true;

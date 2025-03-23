@@ -4,6 +4,7 @@
 
     ./go.nix
     ./nix.nix
+    ./typos.nix
   ];
 
   plugins.lsp = {
