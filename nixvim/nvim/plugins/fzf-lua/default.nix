@@ -46,6 +46,29 @@
           desc = "FzfLua keymaps";
         };
       };
+
+      ## lsp ##
+      "gd" = {
+        mode = "n";
+        action = "lsp_definitions";
+        options = {
+          desc = "FzfLua lsp_definitions";
+        };
+      };
+      "gD" = {
+        mode = "n";
+        action = "lsp_declarations";
+        options = {
+          desc = "FzfLua lsp_declarations";
+        };
+      };
+      "gr" = {
+        mode = "n";
+        action = "lsp_references";
+        options = {
+          desc = "FzfLua lsp_references";
+        };
+      };
       "<leader>ca" = {
         mode = ["n" "x"];
         action = "lsp_code_actions";
@@ -53,6 +76,7 @@
           desc = "FzfLua lsp_code_actions";
         };
       };
+      ## lsp ##
     };
   };
 }
