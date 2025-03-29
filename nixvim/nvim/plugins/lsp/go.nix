@@ -32,7 +32,7 @@
           };
           semanticTokens = true;
 
-          # comletion
+          # completion
           usePlaceholders = true;
           completeUnimported = true;
 
