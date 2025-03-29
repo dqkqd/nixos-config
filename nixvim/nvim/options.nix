@@ -12,6 +12,7 @@
       "menuone"
       "noselect"
     ];
+    conceallevel = 2;
     confirm = true;
     cursorline = true;
     expandtab = true;
