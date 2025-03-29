@@ -10,7 +10,7 @@
       brightnessctl
       just
       okular
-
+      obsidian
       discord
 
       # correctly show icons in tray
