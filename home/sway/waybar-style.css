@@ -16,6 +16,7 @@
 #backlight,
 #wireplumber,
 #disk,
+#bluetooth,
 #language,
 #tray {
   margin: 0px 2px;
@@ -59,6 +60,10 @@ window#waybar {
 
 #wireplumber {
   color: @sapphire;
+}
+
+#bluetooth {
+  color: @yellow
 }
 
 #language {

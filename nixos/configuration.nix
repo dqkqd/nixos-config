@@ -55,6 +55,10 @@
   programs.gnupg.agent.enable = true;
   programs.ssh.startAgent = true;
 
+  # enable bluetooth https://wiki.nixos.org/wiki/Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  services.blueman.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
