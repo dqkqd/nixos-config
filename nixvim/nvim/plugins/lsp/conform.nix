@@ -1,4 +1,8 @@
 {
+  lib,
+  pkgs,
+  ...
+}: {
   plugins.conform-nvim = {
     enable = true;
 
@@ -21,6 +25,10 @@
       log_level = "off";
       notify_on_error = true;
       notify_no_formatters = true;
+
+      formatters = {
+        prettierd.command = lib.getExe pkgs.prettierd;
+      };
     };
   };
 }

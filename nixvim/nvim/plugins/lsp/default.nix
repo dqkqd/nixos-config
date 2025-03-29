@@ -3,6 +3,7 @@
     ./conform.nix
 
     ./go.nix
+    ./markdown.nix
     ./nix.nix
     ./typos.nix
   ];
