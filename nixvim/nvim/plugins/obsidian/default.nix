@@ -5,17 +5,13 @@
     enable = true;
     lazyLoad.settings = {
       ft = "markdown";
-      enabled.__raw =
-        # Lua
-        ''
-          function()
-            -- need to check if we are opening a file inside obsidian workspace
-            local current_file = vim.fn.expand("%:p")
-            local current_dir = vim.fn.getcwd()
-            local workspace = vim.fn.expand("${toString workspace-path}")
-            return vim.startswith(current_file, workspace) or vim.startswith(current_dir, workspace)
-          end
-        '';
+      # https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#using-lazynvim
+      event.__raw = ''
+        {
+          "BufReadPre " .. vim.fn.expand("${toString workspace-path}") .. "/*.md",
+          "BufNewFile " .. vim.fn.expand("${toString workspace-path}") .. "/*.md",
+        }
+      '';
     };
     settings = {
       completion = {
