@@ -1,4 +1,11 @@
-{
+{pkgs, ...}: let
+  imageViewerCommand = ["viu" "-b"];
+  imageExtensions = ["png" "jpg" "jpeg" "gif" "webp"];
+in {
+  extraPackages = with pkgs; [
+    viu
+  ];
+
   plugins.fzf-lua = {
     enable = true;
 
@@ -10,11 +17,17 @@
         treesitter = {
           enabled = true;
         };
-        preview = {
-          default = "bat";
-        };
       };
       fzf_colors = true;
+      previewers = {
+        builtin = {
+          extensions = builtins.listToAttrs (map (key: {
+              name = key;
+              value = imageViewerCommand;
+            })
+            imageExtensions);
+        };
+      };
     };
 
     keymaps = {
