@@ -14,9 +14,12 @@
     wl-clipboard
     # record on wayland
     wf-recorder
-    # notification
-    mako
   ];
+
+  # notification
+  services.mako = {
+    enable = true;
+  };
 
   # enable wayland screen sharing
   xdg.portal = {
