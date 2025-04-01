@@ -5,6 +5,7 @@
     ./go.nix
     ./markdown.nix
     ./nix.nix
+    ./rust.nix
     ./typos.nix
   ];
 
