@@ -8,7 +8,7 @@
     # lazygit
     { mode = "n"; key = "<leader>gg"; action = "<cmd>LazyGit<cr>"; options = { silent = true; desc = "open lazygit"; }; }
 
-    # Fzf-Lua 
+    # Fzf-Lua
     { mode = "n"; key = "<leader>fz"; action = "<cmd>FzfLua<cr>"; options = { silent = true; desc = "open fzf-lua"; }; }
 
     # git signs
@@ -46,18 +46,22 @@
     { mode = "n"; key = "<leader>xL"; action = "<cmd>Trouble loclist toggle<cr>"; options = { silent = true; desc = "Location List (Trouble)"; }; }
     { mode = "n"; key = "<leader>xQ"; action = "<cmd>Trouble qflist toggle<cr>"; options = { silent = true; desc = "Quickfix List (Trouble)"; }; }
 
+    # harpoon
+    { mode = "n"; key = "<leader>ha"; action.__raw = "function() require'harpoon':list():add() end"; }
+    { mode = "n"; key = "<leader>he"; action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end"; }
+    { mode = "n"; key = "<leader>h1"; action.__raw = "function() require'harpoon':list():select(1) end"; }
+    { mode = "n"; key = "<leader>h2"; action.__raw = "function() require'harpoon':list():select(2) end"; }
+    { mode = "n"; key = "<leader>h3"; action.__raw = "function() require'harpoon':list():select(3) end"; }
+    { mode = "n"; key = "<leader>h4"; action.__raw = "function() require'harpoon':list():select(4) end"; }
+    { mode = "n"; key = "<leader>h5"; action.__raw = "function() require'harpoon':list():select(5) end"; }
+    { mode = "n"; key = "<leader>h6"; action.__raw = "function() require'harpoon':list():select(6) end"; }
+    { mode = "n"; key = "<leader>h7"; action.__raw = "function() require'harpoon':list():select(7) end"; }
+    { mode = "n"; key = "<leader>h8"; action.__raw = "function() require'harpoon':list():select(8) end"; }
+    { mode = "n"; key = "<leader>h9"; action.__raw = "function() require'harpoon':list():select(9) end"; }
+    { mode = "n"; key = "<leader>h0"; action.__raw = "function() require'harpoon':list():select(10) end"; }
 
     # turn off format
-    {
-      mode = "n";
-      key = "<leader>uf";
-      action.__raw = "function() vim.cmd('FormatToggle!') end";
-      options = { silent = true; desc = "Buffer Autoformatting toggle"; };
-    }
-    { mode = "n";
-      key = "<leader>uF";
-      action.__raw = "function() vim.cmd('FormatToggle') end";
-      options = { silent = true; desc = "Global Autoformatting toggle"; };
-    }
+    { mode = "n"; key = "<leader>uf"; action.__raw = "function() vim.cmd('FormatToggle!') end"; options = { silent = true; desc = "Buffer Autoformatting toggle"; }; }
+    { mode = "n"; key = "<leader>uF"; action.__raw = "function() vim.cmd('FormatToggle') end"; options = { silent = true; desc = "Global Autoformatting toggle"; }; }
   ];
 }
