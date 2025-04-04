@@ -22,6 +22,7 @@
       ./keymaps.nix
       ./options.nix
       ./performance.nix
+      ./usercommands.nix
     ];
 
   enableMan = true;
