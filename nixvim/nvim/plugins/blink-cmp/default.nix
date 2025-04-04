@@ -113,6 +113,8 @@
           };
         };
       };
+
+      cmdline.enabled = false;
     };
   };
 }
