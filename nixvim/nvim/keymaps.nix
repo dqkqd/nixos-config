@@ -26,16 +26,29 @@
     { mode = "v"; key = "<M-j>"; action = ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv"; options = {desc = "Move Down";}; }
     { mode = "v"; key = "<M-k>"; action = ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv"; options = {desc = "Move Up";}; }
 
+    # better indenting
+    { mode = "v"; key = "<"; action = "<gv"; }
+    { mode = "v"; key = ">"; action = ">gv"; }
+
+    # https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+    { mode = "n"; key = "n"; action = "'Nn'[v:searchforward].'zv'"; options = { expr = true; desc = "Next Search Result"; }; }
+    { mode = "x"; key = "n"; action = "'Nn'[v:searchforward]"; options = { expr = true; desc = "Next Search Result"; }; }
+    { mode = "o"; key = "n"; action = "'Nn'[v:searchforward]"; options = { expr = true; desc = "Next Search Result"; }; }
+    { mode = "n"; key = "N"; action = "'nN'[v:searchforward].'zv'"; options = { expr = true; desc = "Prev Search Result"; }; }
+    { mode = "x"; key = "N"; action = "'nN'[v:searchforward]"; options = { expr = true; desc = "Prev Search Result"; }; }
+    { mode = "o"; key = "N"; action = "'nN'[v:searchforward]"; options = { expr = true; desc = "Prev Search Result"; }; }
+
+
     # turn off format
     {
       mode = "n";
       key = "<leader>uf";
-      action.__raw = "function () vim.cmd('FormatToggle!') end";
+      action.__raw = "function() vim.cmd('FormatToggle!') end";
       options = { silent = true; desc = "Buffer Autoformatting toggle"; };
     }
     { mode = "n";
       key = "<leader>uF";
-      action.__raw = "function () vim.cmd('FormatToggle') end";
+      action.__raw = "function() vim.cmd('FormatToggle') end";
       options = { silent = true; desc = "Global Autoformatting toggle"; };
     }
   ];
