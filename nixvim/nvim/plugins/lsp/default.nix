@@ -1,6 +1,7 @@
 {
   imports = [
     ./conform.nix
+    ./lint.nix
 
     ./go.nix
     ./markdown.nix
