@@ -1,13 +1,16 @@
 {
+  plugins.lualine.settings.options.theme = "catppuccin";
+
   colorschemes = {
-    # TODO: should we use plugins instead?
     catppuccin = {
       enable = true;
       settings = {
         flavour = "auto";
         integrations = {
+          aerial = true;
           blink_cmp = true;
           fzf = true;
+          harpoon = true;
           gitsigns = true;
           treesitter = true;
         };
