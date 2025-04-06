@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  imports = [inputs.catppuccin.homeManagerModules.catppuccin];
+  imports = [inputs.catppuccin.homeModules.catppuccin];
 
   catppuccin = lib.mkDefault {
     enable = true;
