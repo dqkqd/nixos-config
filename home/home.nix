@@ -24,4 +24,14 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # expiring
+  services.home-manager = {
+    autoExpire = {
+      enable = true;
+      frequency = "weekly";
+      store.cleanup = true;
+      timestamp = "-7 days";
+    };
+  };
 }
