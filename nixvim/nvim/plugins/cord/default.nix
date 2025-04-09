@@ -1,9 +1,12 @@
-{helpers, ...}: {
+{
   plugins.cord = {
     enable = true;
     settings = {
       display = {
         theme = "catppuccin";
+      };
+      plugins = {
+        __unkeyed-1 = "cord.plugins.diagnostics";
       };
       text = {
         editing.__raw = ''
@@ -17,9 +20,6 @@
           label = "View Repository";
           url.__raw = ''function(opts) return opts.repo_url end'';
         }
-      ];
-      plugins = helpers.listToUnkeyedAttrs [
-        "cord.plugins.diagnostics"
       ];
       advanced = {
         server = {
