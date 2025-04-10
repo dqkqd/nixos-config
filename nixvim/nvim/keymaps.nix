@@ -63,5 +63,8 @@
     # turn off format
     { mode = "n"; key = "<leader>uf"; action.__raw = "function() vim.cmd('FormatToggle!') end"; options = { silent = true; desc = "Buffer Autoformatting toggle"; }; }
     { mode = "n"; key = "<leader>uF"; action.__raw = "function() vim.cmd('FormatToggle') end"; options = { silent = true; desc = "Global Autoformatting toggle"; }; }
+
+    # search and replace
+    { mode = ["n" "v" ]; key = "<leader>sr"; action = "<cmd>GrugFar<cr>"; options = { desc = "Search and Replace"; }; }
   ];
 }
