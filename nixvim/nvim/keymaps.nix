@@ -47,18 +47,20 @@
     { mode = "n"; key = "<leader>xQ"; action = "<cmd>Trouble qflist toggle<cr>"; options = { silent = true; desc = "Quickfix List (Trouble)"; }; }
 
     # harpoon
-    { mode = "n"; key = "<leader>ha"; action.__raw = "function() require'harpoon':list():add() end"; }
-    { mode = "n"; key = "<leader>he"; action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end"; }
-    { mode = "n"; key = "<leader>h1"; action.__raw = "function() require'harpoon':list():select(1) end"; }
-    { mode = "n"; key = "<leader>h2"; action.__raw = "function() require'harpoon':list():select(2) end"; }
-    { mode = "n"; key = "<leader>h3"; action.__raw = "function() require'harpoon':list():select(3) end"; }
-    { mode = "n"; key = "<leader>h4"; action.__raw = "function() require'harpoon':list():select(4) end"; }
-    { mode = "n"; key = "<leader>h5"; action.__raw = "function() require'harpoon':list():select(5) end"; }
-    { mode = "n"; key = "<leader>h6"; action.__raw = "function() require'harpoon':list():select(6) end"; }
-    { mode = "n"; key = "<leader>h7"; action.__raw = "function() require'harpoon':list():select(7) end"; }
-    { mode = "n"; key = "<leader>h8"; action.__raw = "function() require'harpoon':list():select(8) end"; }
-    { mode = "n"; key = "<leader>h9"; action.__raw = "function() require'harpoon':list():select(9) end"; }
-    { mode = "n"; key = "<leader>h0"; action.__raw = "function() require'harpoon':list():select(10) end"; }
+    { mode = "n"; key = "<leader>ha"; action.__raw = "function() require'harpoon':list():add() end"; options = { desc = "Harpoon add"; }; }
+    { mode = "n"; key = "<leader>he"; action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end"; options = { desc = "Harpoon open"; }; }
+    { mode = "n"; key = "<leader>hn"; action.__raw = "function() require'harpoon':list():next() end"; options = { desc = "Harpoon next"; }; }
+    { mode = "n"; key = "<leader>hp"; action.__raw = "function() require'harpoon':list():prev() end"; options = { desc = "Harpoon prev"; }; }
+    { mode = "n"; key = "<leader>h1"; action.__raw = "function() require'harpoon':list():select(1) end"; options = { desc = "Harpoon 1"; }; }
+    { mode = "n"; key = "<leader>h2"; action.__raw = "function() require'harpoon':list():select(2) end"; options = { desc = "Harpoon 2"; }; }
+    { mode = "n"; key = "<leader>h3"; action.__raw = "function() require'harpoon':list():select(3) end"; options = { desc = "Harpoon 3"; }; }
+    { mode = "n"; key = "<leader>h4"; action.__raw = "function() require'harpoon':list():select(4) end"; options = { desc = "Harpoon 4"; }; }
+    { mode = "n"; key = "<leader>h5"; action.__raw = "function() require'harpoon':list():select(5) end"; options = { desc = "Harpoon 5"; }; }
+    { mode = "n"; key = "<leader>h6"; action.__raw = "function() require'harpoon':list():select(6) end"; options = { desc = "Harpoon 6"; }; }
+    { mode = "n"; key = "<leader>h7"; action.__raw = "function() require'harpoon':list():select(7) end"; options = { desc = "Harpoon 7"; }; }
+    { mode = "n"; key = "<leader>h8"; action.__raw = "function() require'harpoon':list():select(8) end"; options = { desc = "Harpoon 8"; }; }
+    { mode = "n"; key = "<leader>h9"; action.__raw = "function() require'harpoon':list():select(9) end"; options = { desc = "Harpoon 9"; }; }
+    { mode = "n"; key = "<leader>h0"; action.__raw = "function() require'harpoon':list():select(10) end"; options = { desc = "Harpoon 10"; }; }
 
     # turn off format
     { mode = "n"; key = "<leader>uf"; action.__raw = "function() vim.cmd('FormatToggle!') end"; options = { silent = true; desc = "Buffer Autoformatting toggle"; }; }
