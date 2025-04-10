@@ -49,6 +49,8 @@
     # harpoon
     { mode = "n"; key = "<leader>ha"; action.__raw = "function() require'harpoon':list():add() end"; }
     { mode = "n"; key = "<leader>he"; action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end"; }
+    { mode = "n"; key = "<leader>hn"; action.__raw = "function() require'harpoon':list():next() end"; }
+    { mode = "n"; key = "<leader>hp"; action.__raw = "function() require'harpoon':list():prev() end"; }
     { mode = "n"; key = "<leader>h1"; action.__raw = "function() require'harpoon':list():select(1) end"; }
     { mode = "n"; key = "<leader>h2"; action.__raw = "function() require'harpoon':list():select(2) end"; }
     { mode = "n"; key = "<leader>h3"; action.__raw = "function() require'harpoon':list():select(3) end"; }
