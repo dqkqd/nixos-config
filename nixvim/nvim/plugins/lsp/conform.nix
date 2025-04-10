@@ -20,7 +20,6 @@
     settings = {
       formatters_by_ft = {
         "just" = ["just"];
-        "*" = ["codespell"];
         "_" = [
           "trim_whitespace"
           "trim_newlines"
