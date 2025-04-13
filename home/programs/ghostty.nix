@@ -10,7 +10,7 @@
       background-opacity = 0.9;
       font-family = "FiraCode Nerd Font Mono";
       font-feature = ["-calt" "-liga" "-dlig"];
-      font-size = 13.5;
+      font-size = 11.5;
       maximize = true;
     };
   };
