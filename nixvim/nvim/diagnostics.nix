@@ -1,5 +1,5 @@
 {
-  diagnostics = {
+  diagnostic.settings = {
     underline = true;
     virtual_text = {
       spacing = 4;
