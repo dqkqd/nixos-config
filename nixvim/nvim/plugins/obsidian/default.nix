@@ -1,6 +1,6 @@
 {
   plugins.obsidian = let
-    workspace-path = "~/workspace/obsidian-notes";
+    workspace-path = "~/workspace/notes";
   in {
     enable = true;
     lazyLoad.settings = {
@@ -14,9 +14,17 @@
       '';
     };
     settings = {
-      completion = {
-        blink = true;
-      };
+      completion.blink = true;
+      picker.name = "fzf-lua";
+      workspaces = [
+        {
+          name = "note";
+          path = workspace-path;
+        }
+      ];
+      notes_subdir = "inbox";
+      new_notes_location = "notes_subdir";
+      templates.subdir = "templates";
       note_id_func =
         # Lua
         ''
@@ -37,18 +45,21 @@
             return tostring(os.time()) .. "-" .. suffix
           end
         '';
-      picker = {
-        name = "fzf-lua";
+      attachments = {
+        img_folder = "assets/imgs";
+        img_name_func.__raw = ''
+          function()
+            -- Prefix image names with timestamp.
+            return string.format("%s-", os.time())
+          end
+        '';
+        img_text_func.__raw = ''
+          function(client, path)
+            path = client:vault_relative_path(path) or path
+            return string.format("![%s](%s)", path.stem, path)
+          end
+        '';
       };
-      templates = {
-        subdir = "templates";
-      };
-      workspaces = [
-        {
-          name = "note";
-          path = workspace-path;
-        }
-      ];
     };
   };
 }
