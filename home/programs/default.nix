@@ -10,6 +10,7 @@
     ./ghostty.nix
     ./git.nix
     ./starship.nix
+    ./pomodoro.nix
     ./zsh.nix
   ];
 
