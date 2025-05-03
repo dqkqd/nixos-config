@@ -2,7 +2,6 @@
   imports = [
     ./catppuccin.nix
     ./fonts.nix
-    ./packages.nix
     ./programs
     ./sway
   ];
