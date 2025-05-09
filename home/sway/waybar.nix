@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        output = ["eDP-1" "HDMI-A-1"];
+        output = ["eDP-1" "HDMI-A-1" "DP-2"];
 
         modules-left = [
           "sway/workspaces"

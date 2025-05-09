@@ -16,8 +16,8 @@
         "*" = {
           bg = "${./thank-you.png} fill";
         };
-        "HDMI-A-1" = {
-          mode = "1920x1080@74.973Hz";
+        "HDMI-A-1 DP-2" = {
+          mode = "1920x1080@60.000Hz";
         };
       };
 
@@ -34,7 +34,7 @@
         externals =
           map (ws: {
             workspace = ws;
-            output = "HDMI-A-1";
+            output = "HDMI-A-1 DP-2";
           })
           externalWorkspaces;
       in
