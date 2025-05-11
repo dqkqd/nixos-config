@@ -75,5 +75,8 @@
     { mode = "o"; key = "r"; action.__raw = "function() require'flash'.remote() end"; options = { desc = "Remote Flash"; }; }
     { mode = ["o" "x"]; key = "R"; action.__raw = "function() require'flash'.treesitter_search() end"; options = { desc = "Treesitter Search"; }; }
     { mode = "c"; key = "<c-s>"; action.__raw = "function() require'flash'.toggle() end"; options = { desc = "Toggle Flash Search"; }; }
+
+    # save file
+    { mode = ["i" "x" "n" "s" ]; key = "<C-s>"; action = "<cmd>w<cr><esc>"; options = { desc = "Save File"; }; }
   ];
 }
