@@ -24,7 +24,7 @@
       input = {
         "type:keyboard" = {
           xkb_layout = "us,us";
-          xkb_variant = ",colemak";
+          xkb_variant = "colemak,";
           xkb_options = "grp:alt_shift_toggle";
         };
       };
