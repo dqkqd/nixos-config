@@ -38,6 +38,13 @@ in {
           desc = "FzfLua files";
         };
       };
+      "<leader><leader>" = {
+        action = "files";
+        options = {
+          silent = true;
+          desc = "FzfLua files";
+        };
+      };
       "<leader>fg" = {
         action = "git_files";
         options = {
