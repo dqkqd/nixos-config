@@ -4,6 +4,7 @@
     ./lint.nix
 
     ./go.nix
+    ./shell.nix
     ./markdown.nix
     ./nix.nix
     ./python.nix
