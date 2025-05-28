@@ -27,11 +27,11 @@
         markdownlint.cmd = lib.getExe pkgs.markdownlint-cli2;
       };
     };
+  };
 
-    lsp.servers = {
-      marksman = {
-        enable = true;
-      };
+  lsp.servers = {
+    marksman = {
+      enable = true;
     };
   };
 }

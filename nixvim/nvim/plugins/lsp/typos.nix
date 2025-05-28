@@ -1,5 +1,5 @@
 {
-  plugins.lsp.servers = {
+  lsp.servers = {
     typos_lsp = {
       enable = true;
     };

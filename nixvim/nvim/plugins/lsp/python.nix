@@ -16,14 +16,14 @@
         ];
       };
     };
+  };
 
-    lsp.servers = {
-      ruff = {
-        enable = true;
-      };
-      basedpyright = {
-        enable = true;
-      };
+  lsp.servers = {
+    ruff = {
+      enable = true;
+    };
+    basedpyright = {
+      enable = true;
     };
   };
 }

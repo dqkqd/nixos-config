@@ -31,15 +31,15 @@
         statix.cmd = lib.getExe pkgs.statix;
       };
     };
+  };
 
-    lsp.servers = {
-      nil_ls = {
-        enable = true;
-        settings = {
-          nix = {
-            flake = {
-              autoArchive = true;
-            };
+  lsp.servers = {
+    nil_ls = {
+      enable = true;
+      settings = {
+        nix = {
+          flake = {
+            autoArchive = true;
           };
         };
       };

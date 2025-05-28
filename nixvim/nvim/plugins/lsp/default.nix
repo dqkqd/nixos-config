@@ -12,14 +12,14 @@
     ./typos.nix
   ];
 
-  plugins.lsp = {
-    enable = true;
-    inlayHints = true;
-
-    keymaps = {
-      lspBuf = {
-        "<leader>cr" = "rename";
-      };
-    };
+  plugins.lspconfig.enable = true;
+  lsp = {
+    inlayHints.enable = true;
+    keymaps = [
+      {
+        key = "<leader>cr";
+        lspBufAction = "rename";
+      }
+    ];
   };
 }
