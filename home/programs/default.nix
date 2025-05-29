@@ -41,6 +41,8 @@
       adwaita-icon-theme
 
       vlc
+
+      dbeaver-bin
     ]
     ++ [
       inputs.nixvim-config.packages.${pkgs.system}.default
