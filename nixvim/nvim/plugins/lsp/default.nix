@@ -11,6 +11,7 @@
     ./rust.nix
     ./typos.nix
     ./sql.nix
+    ./toml.nix
   ];
 
   plugins.lspconfig.enable = true;
