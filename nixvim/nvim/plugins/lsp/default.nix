@@ -10,6 +10,7 @@
     ./python.nix
     ./rust.nix
     ./typos.nix
+    ./sql.nix
   ];
 
   plugins.lspconfig.enable = true;
