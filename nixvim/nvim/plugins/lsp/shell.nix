@@ -8,6 +8,13 @@
         sh = ["shfmt"];
       };
     };
+
+    lint = {
+      lintersByFt = {
+        bash = ["bash"];
+        sh = ["bash"];
+      };
+    };
   };
 
   lsp.servers = {
