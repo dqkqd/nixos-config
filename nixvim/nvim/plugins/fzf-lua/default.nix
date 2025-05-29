@@ -5,6 +5,9 @@ in {
   extraPackages = with pkgs; [
     viu
   ];
+  extraConfigLua = ''
+    require("fzf-lua").register_ui_select()
+  '';
 
   plugins.fzf-lua = {
     enable = true;
